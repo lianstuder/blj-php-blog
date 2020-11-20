@@ -1,7 +1,12 @@
-<h2>gentooooo momentooooo</h2>
-<p>Ubuntu moment ubuntu moment bloat bloat </br> bruh bruh bruh bruh </br></p>
+<h2>Latest Posts</h2>
 <ul>
-    <?php foreach ($posts as $postIndex => $post): ?>
-    <li><?= htmlspecialchars($post); ?></li>
-    <?php endforeach; ?>
+<?php foreach ($posts as $post): ?>
+    <li class="post-container">
+        <div class="post-header">
+            <h3><?= htmlspecialchars($post["post_title"]); ?></h3>
+            <small>Erstellt von <?= htmlspecialchars($post["post_created_by"]); ?> am <?= htmlspecialchars($post["post_created_at"]); ?></small>
+        </div>
+        <p class="post-body"><?= htmlspecialchars($post["post_content"]); ?></p>
+    </li>
+<?php endforeach; ?>
 </ul>

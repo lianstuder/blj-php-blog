@@ -1,7 +1,5 @@
 <?php
 
-include "./controller/db.php";
-
 // Page parameter
 $page = $_GET["page"] ?? "home.php";
 
@@ -10,11 +8,11 @@ $views = [
     "About" => "about.php"
 ];
 
-function includeView($views, $view_name) {
+function includeView($views, $viewName) {
     foreach ($views as $name => $view) {
-        if ($view_name === $view) {
+        if ($viewName === $view) {
             // Include controller
-            include "./controller/$view";
+            include "./controller/$view"; 
 
             // Include view
             return include "./views/$view";

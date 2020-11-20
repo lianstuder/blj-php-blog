@@ -3,6 +3,12 @@
 :root {
     --light-font: #f1ffff;
     --dark-font: #00000f;
+
+    --background-light: #ffffff;
+    --background-dark: #000000;
+
+    --background-light-alt: #f9f9f9;
+    --background-dark-alt: #090909;
 }
 
 body {
@@ -25,6 +31,11 @@ ul, ol, li {
 
 a {
     text-decoration: none;
+}
+
+small {
+    font-size: 9px;
+    color: grey;
 }
 
 /* ===== HEADER ===== */
@@ -58,3 +69,18 @@ a {
 }
 
 
+/* ===== POSTS ===== */
+.post-container {
+    background-color: var(--background-light-alt);
+    padding: 20px;
+}
+
+.post-container h3 {
+    font-weight: bold;
+    border-bottom: 1px solid grey;
+    margin-bottom: 0;
+}
+
+p.post-body {
+    font-size: 15px;
+}
