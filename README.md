@@ -1,4 +1,4 @@
-# blj-php-blog
+# BLJ PHP Blog
 
 - [x] Als Benutzer will ich Blog-Beiträge lesen können.	
 - [ ] Als Blogger will ich Blog-Beiträge schreiben können.
