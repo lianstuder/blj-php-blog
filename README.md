@@ -1,5 +1,7 @@
 # BLJ PHP Blog
 
+## Checkliste
+
 - [x] Als Benutzer will ich Blog-Beiträge lesen können.	
 - [ ] Als Blogger will ich Blog-Beiträge schreiben können.
 - [x] Zu jedem Blog-Beitrag sollen der Name des Bloggers sowie Erstelldatum/-zeit angezeigt werden.	
@@ -16,3 +18,7 @@
 - [ ] Als Benutzer will ich einen Blog-Beitrag kommentieren können.	3
 - [ ] Als Blogger will ich per E-Mail informiert werden, wenn eine meiner Beiträge bewertet/kommentiert wurde.	3
 - [ ] Als Benutzer will ich mich registrieren können, um selber als Blogger Beiträge schreiben zu können.	3
+
+## Blog URLs DB
+
+Hier entsteht die Dokumentation zur Verwendung der URL Datenbank der BLJ Blogs.
