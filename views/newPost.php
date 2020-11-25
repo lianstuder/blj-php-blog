@@ -1,3 +1,4 @@
+<h2>Neuer Post</h2>
 <?php if (sizeof($errors) > 0): ?>
 <div class="error-box">
     <?php foreach($errors as $index => $error): ?>
