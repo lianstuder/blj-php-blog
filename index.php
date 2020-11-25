@@ -5,15 +5,21 @@ $page = $_GET["page"] ?? "home.php";
 
 $views = [
     "Home" => "home.php",
-    "About" => "about.php"
+    "About" => "about.php",
+    "New Post" => "newPost.php"
 ];
+
+$controllers = [
+    "home.php"
+]
 
 function includeView($views, $viewName) {
     foreach ($views as $name => $view) {
         if ($viewName === $view) {
-            // Include controller
-            include "./controller/$view"; 
-
+            if (in_array($view, $controllers)) {
+                // Include controller
+                include "./controller/$view"; 
+            }
             // Include view
             return include "./views/$view";
         }
