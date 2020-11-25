@@ -31,7 +31,7 @@ Die Zugangsdaten sind bereits im Code enthalten.
 $dbuser = "d041e_listuder";
 $dbpass = ""; // ACHTUNG: DU MUST HIER NOCH DAS PASSWORT EINSETZEN. DU FINDEST ES AUF DISCORD IM INFO CHANNEL.
 
-$pdo = new PDO("mysql://host=mysql2.webland.ch;dbname=d041e_listuder", $dbuser, $dbpass, [
+$pdo = new PDO("mysql:host=mysql2.webland.ch;dbname=d041e_listuder", $dbuser, $dbpass, [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
 ]);
@@ -42,8 +42,7 @@ $pdo = new PDO("mysql://host=mysql2.webland.ch;dbname=d041e_listuder", $dbuser, 
 Nach der Herstellung einer Verbindung zur Datenbank, kannst du mit einer SQL Query die URLs aus der Datenbank ziehen.
 
 ```php
-$sqlQuery = $pdo->prepare("SELECT * FROM :blog_url");
-$sqlQuery->execute([":blog_url" => "blog_url"]);
+$sqlQuery = $pdo->query("SELECT * FROM `blog_url`");
 $urls = $sqlQuery->fetchAll();
 ```
 
@@ -54,13 +53,12 @@ Der Code sollte am Schluss also etwa so aussehen:
 $dbuser = "d041e_listuder";
 $dbpass = ""; // ACHTUNG: DU MUST HIER NOCH DAS PASSWORT EINSETZEN. DU FINDEST ES AUF DISCORD IM INFO CHANNEL.
 
-$pdo = new PDO("mysql://host=mysql2.webland.ch;dbname=d041e_listuder", $dbuser, $dbpass, [
+$pdo = new PDO("mysql:host=mysql2.webland.ch;dbname=d041e_listuder", $dbuser, $dbpass, [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
 ]);
 
-$sqlQuery = $pdo->prepare("SELECT * FROM :blog_url");
-$sqlQuery->execute([":blog_url" => "blog_url"]);
+$sqlQuery = $pdo->query("SELECT * FROM `blog_url`");
 $urls = $sqlQuery->fetchAll();
 ?>
 ```
