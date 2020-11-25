@@ -29,7 +29,9 @@ Die Zugangsdaten sind bereits im Code enthalten.
 
 ```php
 $dbuser = "d041e_listuder";
-$dbpass = ""; // ACHTUNG: DU MUST HIER NOCH DAS PASSWORT EINSETZEN. DU FINDEST ES AUF DISCORD IM INFO CHANNEL.
+
+// ACHTUNG: DU MUST HIER NOCH DAS PASSWORT EINSETZEN. DU FINDEST ES AUF DISCORD IM INFO CHANNEL
+$dbpass = "";
 
 $pdo = new PDO("mysql:host=mysql2.webland.ch;dbname=d041e_listuder", $dbuser, $dbpass, [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
@@ -51,7 +53,9 @@ Der Code sollte am Schluss also etwa so aussehen:
 ```php
 <?php
 $dbuser = "d041e_listuder";
-$dbpass = ""; // ACHTUNG: DU MUST HIER NOCH DAS PASSWORT EINSETZEN. DU FINDEST ES AUF DISCORD IM INFO CHANNEL.
+
+// ACHTUNG: DU MUST HIER NOCH DAS PASSWORT EINSETZEN. DU FINDEST ES AUF DISCORD IM INFO CHANNEL
+$dbpass = "";
 
 $pdo = new PDO("mysql:host=mysql2.webland.ch;dbname=d041e_listuder", $dbuser, $dbpass, [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
