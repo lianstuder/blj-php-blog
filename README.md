@@ -3,7 +3,7 @@
 ## Checkliste
 
 - [x] Als Benutzer will ich Blog-Beiträge lesen können.
-- [ ] Als Blogger will ich Blog-Beiträge schreiben können.
+- [x] Als Blogger will ich Blog-Beiträge schreiben können.
 - [x] Zu jedem Blog-Beitrag sollen der Name des Bloggers sowie Erstelldatum/-zeit angezeigt werden.
 - [ ] Als Benutzer will ich eine Liste mit Links zu den Blogs meiner BLJ-Kollegen sehen.
 - [ ] Als Blogger will ich Bilder aus dem Internet verlinken können, um meine Beiträge interessanter zu machen.
