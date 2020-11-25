@@ -1,14 +1,5 @@
 <?php
-$errors = array();
 $success = false;
-
-$user = 'root';
-$password = '';
-
-$pdo = new PDO('mysql:host=localhost;dbname=blog', $user, $password, [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
-]);
 
 // Existing posts
 $stmt = $pdo->query('SELECT * FROM `tblPost`');
@@ -16,7 +7,7 @@ $posts = $stmt->fetchAll();
 
 
 // New post
-if ($_SERVER['REQUEST_METHOD'] === "POST") {
+if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST["post"])) {
     $submittedValues = $_POST;
 
     foreach ($submittedValues as $index => $fieldValue) {
