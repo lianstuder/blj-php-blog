@@ -1,10 +1,9 @@
 <h2>Latest Posts</h2>
-<div class="options">
+<nav class="actions">
     <ul>
-        <li>Neuer Post</li>
-        <li>Bruh</li>
+        <li><a href="?page=newPost.php">Neuer Post</a></li>
     </ul>
-</div>
+</nav>
 <ul>
 <?php foreach ($posts as $post): ?>
     <li class="post-container">
