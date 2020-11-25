@@ -11,7 +11,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=blog', $user, $password, [
 ]);
 
 // Existing posts
-$stmt = $pdo->query('SELECT * FROM `posts`');
+$stmt = $pdo->query('SELECT * FROM `tblPost`');
 $posts = $stmt->fetchAll();
 
 
@@ -21,26 +21,13 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
     foreach ($submittedValues as $index => $fieldValue) {
         $submittedValues[$index] = trim($fieldValue);
-        if (strlen($fieldValue) === 0) {
-            switch ($index) {
-                case "postTitle":
-                    $errors[] = "Bitte geben Sie einen Titel ein.";
-                    break;
-
-                case "postAuthor":
-                    $errors[] = "Sie müssen einen Authoren festlegen.";
-                    break;
-
-                case "postContent":
-                    $errors[] = "Bitte geben Sie einen Post Inhalt ein.";
-                    break;
-            }
-        }
     }
+
+    var_dump($errors);
 
     $success = true;
     $sqlStmt = $pdo -> prepare(
-        "INSERT INTO `posts` (`post_id`, `post_created_by`, `post_created_at`, `post_title`, `post_content`) 
+        "INSERT INTO `tblPost` (`postId`, `postCreatedBy`, `postCreatedOn`, `postTitle`, `postContent`) 
         VALUES (NULL, ?, current_timestamp(), ?, ?) ");
 
     $sqlStmt->execute([$_POST["postAuthor"], $_POST["postTitle"], $_POST["postContent"]]);

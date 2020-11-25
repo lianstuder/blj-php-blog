@@ -24,11 +24,6 @@ ul {
     list-style-position: inside;
 }
 
-ul, ol, li {
-    margin: 0;
-    padding: 0;
-} 
-
 a {
     text-decoration: none;
 }
@@ -38,7 +33,28 @@ small {
     color: grey;
 }
 
+/* ===== ERRORS ===== */
+.error-box {
+    color: red;
+    background-color: rgb(250, 220, 220);
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0px;
+}
+
+.error-box > * {
+    margin: 0;
+}
+
 /* ===== HEADER ===== */
+
+header ul, 
+header li {
+    margin: 0;
+    padding: 0;
+}
+
 header {
     position: absolute;
     left: 0;
@@ -75,6 +91,7 @@ header {
 .post-container {
     background-color: var(--background-light-alt);
     padding: 20px;
+    margin: 20px 0 !important;
 }
 
 .post-container h3 {
@@ -93,6 +110,18 @@ nav.actions {
     padding: 10px;
 }
 
-nav.actions li{
+nav.actions li {
     display: inline;
+}
+
+nav.actions ul {
+    padding: 0;
+    margin: 0;
+}
+
+/* ===== OTHER BLOGS ===== */
+.blogs-list li{
+    background-color: var(--background-light-alt);
+    margin: 20px 0;
+    padding: 10px;
 }

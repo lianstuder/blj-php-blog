@@ -5,11 +5,13 @@ $page = $_GET["page"] ?? "home.php";
 
 $views = [
     "Home" => "home.php",
+    "Andere Blogs" => "links.php",
     "Post erstellen" => "newPost.php"
 ];
 
 $controllers = [
     "PostController.php",
+    "LinksController.php"
 ];
 
 function includeView($views, $controllers, $viewName) {

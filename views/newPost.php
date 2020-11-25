@@ -1,3 +1,5 @@
+
+<?php if ($success === false): ?>
 <h2>Neuer Post</h2>
 <?php if (sizeof($errors) > 0): ?>
 <div class="error-box">
@@ -6,7 +8,6 @@
     <?php endforeach; ?>
 </div>
 <?php endif; ?>
-<?php if ($success === false): ?>
 <form action="?page=newPost.php" method="POST">
     <label for="postTitle">Titel</label>
     <input type="text" name="postTitle" id="postTitle" placeholder="Mein neuer Post" required>
@@ -15,7 +16,7 @@
     <input type="text" name="postAuthor" id="PostAuthor" placeholder="Noah Buchs" required>
 
     <label for="postContent">Inhalt</label>
-    <textarea name="postContent" id="postContent" placeholder="Arch > Gentoo"></textarea>
+    <textarea name="postContent" id="postContent" placeholder="Arch > Gentoo" required></textarea>
 
     <input type="submit" value="Posten">
 </form>
