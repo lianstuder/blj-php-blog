@@ -1,5 +1,10 @@
 # BLJ PHP Blog
 
+## Todo - Persönliche Ziele
+
+- [ ] Eingabevalidierung optimieren
+- [ ] Redundanter Code verringern
+
 ## Checkliste
 
 - [x] Als Benutzer will ich Blog-Beiträge lesen können.
