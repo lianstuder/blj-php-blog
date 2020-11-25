@@ -28,7 +28,15 @@
     </header>
     <div class="container">
         <main>
-            <?php  includeView($views, $controllers, $page); ?>
+            <?php 
+            // Include view
+            foreach ($views as $index => $view) {
+                if ($page === $view) {
+                    include "./views/$view";
+                    break;
+                }
+            }
+            ?>
         </main>  
     </div>
     <footer>
