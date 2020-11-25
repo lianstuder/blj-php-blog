@@ -29,9 +29,9 @@ Die Zugangsdaten sind bereits im Code enthalten.
 
 ```php
 $dbuser = "d041e_listuder";
-$dbpass = "12345_Db!!!";
+$dbpass = ""; // ACHTUNG: DU MUST HIER NOCH DAS PASSWORT EINSETZEN. DU FINDEST ES AUF DISCORD IM INFO CHANNEL.
 
-$pdo = new PDO('https://mysql2.webland.ch/?dbname=d041e_listuder', "d041e_listuder", "12345_Db!!!", [
+$pdo = new PDO("mysql://host=mysql2.webland.ch;dbname=d041e_listuder", $dbuser, $dbpass, [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
 ]);
@@ -45,6 +45,24 @@ Nach der Herstellung einer Verbindung zur Datenbank, kannst du mit einer SQL Que
 $sqlQuery = $pdo->prepare("SELECT * FROM :blog_url");
 $sqlQuery->execute([":blog_url" => "blog_url"]);
 $urls = $sqlQuery->fetchAll();
+```
+
+Der Code sollte am Schluss also etwa so aussehen:
+
+```php
+<?php
+$dbuser = "d041e_listuder";
+$dbpass = ""; // ACHTUNG: DU MUST HIER NOCH DAS PASSWORT EINSETZEN. DU FINDEST ES AUF DISCORD IM INFO CHANNEL.
+
+$pdo = new PDO("mysql://host=mysql2.webland.ch;dbname=d041e_listuder", $dbuser, $dbpass, [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
+]);
+
+$sqlQuery = $pdo->prepare("SELECT * FROM :blog_url");
+$sqlQuery->execute([":blog_url" => "blog_url"]);
+$urls = $sqlQuery->fetchAll();
+?>
 ```
 
 Nun hast du ein Array mit sämtlichen Blog URLs. Die Verarbeitung der Daten überlasse ich euch.
