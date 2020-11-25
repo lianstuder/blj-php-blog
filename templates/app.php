@@ -28,7 +28,7 @@
     </header>
     <div class="container">
         <main>
-            <?php  includeView($views, $page); ?>
+            <?php  includeView($views, $controllers, $page); ?>
         </main>  
     </div>
     <footer>

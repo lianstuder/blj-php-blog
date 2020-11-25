@@ -11,9 +11,9 @@ $views = [
 
 $controllers = [
     "home.php"
-]
+];
 
-function includeView($views, $viewName) {
+function includeView($views, $controllers, $viewName) {
     foreach ($views as $name => $view) {
         if ($viewName === $view) {
             if (in_array($view, $controllers)) {
