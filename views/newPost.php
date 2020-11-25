@@ -1,5 +1,12 @@
+<?php
 
-<?php if ($success === false): ?>
+session_start();
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: ?page=login.php");
+    exit;
+}
+
+if ($success === false): ?>
 <h2>Neuer Post</h2>
 <?php if (sizeof($errors) > 0): ?>
 <div class="error-box">
@@ -17,6 +24,13 @@
 
     <label for="postContent">Inhalt</label>
     <textarea name="postContent" id="postContent" placeholder="Arch > Gentoo" required></textarea>
+
+    <!-- TODO: 
+        - Drag and Drop Attachments / Images
+    -->
+
+    <label for="postBanner">Banner Image URL</label>
+    <input type="text" name="postBanner" id="postBanner" placeholder="https://somedomain.com/image.jpg">
 
     <input type="submit" value="Posten">
 </form>

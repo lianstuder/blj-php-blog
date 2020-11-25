@@ -23,13 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         $submittedValues[$index] = trim($fieldValue);
     }
 
-    var_dump($errors);
-
     $success = true;
     $sqlStmt = $pdo -> prepare(
-        "INSERT INTO `tblPost` (`postId`, `postCreatedBy`, `postCreatedOn`, `postTitle`, `postContent`) 
-        VALUES (NULL, ?, current_timestamp(), ?, ?) ");
+        "INSERT INTO `tblPost` (`postId`, `postCreatedBy`, `postCreatedOn`, `postTitle`, `postContent`, `postBanner`) 
+        VALUES (NULL, ?, current_timestamp(), ?, ?, ?) ");
 
-    $sqlStmt->execute([$_POST["postAuthor"], $_POST["postTitle"], $_POST["postContent"]]);
+    $sqlStmt->execute([$_POST["postAuthor"], $_POST["postTitle"], $_POST["postContent"], $_POST["postBanner"]]);
 }
 ?>

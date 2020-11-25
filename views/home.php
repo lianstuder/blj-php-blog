@@ -8,10 +8,19 @@
 <?php foreach ($posts as $post): ?>
     <li class="post-container">
         <div class="post-header">
-            <h3><?= htmlspecialchars($post["post_title"]); ?></h3>
-            <small>Erstellt von <?= htmlspecialchars($post["post_created_by"]); ?> am <?= htmlspecialchars($post["post_created_at"]); ?></small>
+            <h3><?= htmlspecialchars($post["postTitle"]); ?></h3>
+            <small>Erstellt von <?= htmlspecialchars($post["postCreatedBy"]); ?> am <?= htmlspecialchars($post["postCreatedOn"]); ?></small>
         </div>
-        <p class="post-body"><?= htmlspecialchars($post["post_content"]); ?></p>
+        <?php if (strlen(trim($post["postBanner"])) > 0): ?>
+            <img src="<?= htmlspecialchars($post["postBanner"]) ?>" alt="content not found" class="post-banner">
+        <?php endif; ?>
+        <p class="post-body"><?= htmlspecialchars($post["postContent"]); ?></p>
+        <div class="post-footer">
+            <ul>
+                <li><img src="./static/images/upvote.png" alt="upvote"></li>
+                <li><img src="./static/images/downvote.png" alt="downvote"></li>
+            </ul>
+        </div>
     </li>
 <?php endforeach; ?>
 </ul>
