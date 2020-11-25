@@ -5,8 +5,7 @@ $page = $_GET["page"] ?? "home.php";
 
 $views = [
     "Home" => "home.php",
-    "About" => "about.php",
-    "New Post" => "newPost.php"
+    "Post erstellen" => "newPost.php"
 ];
 
 $controllers = [
