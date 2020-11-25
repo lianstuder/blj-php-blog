@@ -16,7 +16,7 @@ $controllers = [
 function includeView($views, $controllers, $viewName) {
     // Include controllers
     foreach ($controllers as $index => $ctrlr) {
-        include "./controller/$view"; 
+        include "./controller/$ctrlr"; 
     }
     
     // Include view
