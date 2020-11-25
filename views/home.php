@@ -1,4 +1,10 @@
 <h2>Latest Posts</h2>
+<div class="options">
+    <ul>
+        <li>Neuer Post</li>
+        <li>Bruh</li>
+    </ul>
+</div>
 <ul>
 <?php foreach ($posts as $post): ?>
     <li class="post-container">

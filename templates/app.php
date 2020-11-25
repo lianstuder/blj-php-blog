@@ -27,7 +27,13 @@
         </div>
     </header>
     <div class="container">
-        <?php  includeView($views, $page); ?>   
-    </div> 
+        <main>
+            <?php  includeView($views, $page); ?>
+        </main>  
+    </div>
+    <footer>
+        <ul>
+        </ul>
+    </footer>
 </body>
 </html>

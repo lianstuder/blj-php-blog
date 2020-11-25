@@ -39,11 +39,14 @@ small {
 }
 
 /* ===== HEADER ===== */
-#title-bar {
+header {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
+}
+
+#title-bar {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -63,11 +66,14 @@ small {
     margin: 0 20px;
 }
 
+#tool-bar {
+    margin-top: 30px;
+}
+
 /* ===== BODY =====  */
 .container {
     margin-top: 100px;
 }
-
 
 /* ===== POSTS ===== */
 .post-container {
@@ -83,4 +89,9 @@ small {
 
 p.post-body {
     font-size: 15px;
+}
+
+.options li {
+    display: inline;
+    padding: 10px;
 }
