@@ -10,17 +10,18 @@ $views = [
 ];
 
 $controllers = [
-    "home.php"
+    "PostController.php",
 ];
 
 function includeView($views, $controllers, $viewName) {
-    foreach ($views as $name => $view) {
+    // Include controllers
+    foreach ($controllers as $index => $ctrlr) {
+        include "./controller/$view"; 
+    }
+    
+    // Include view
+    foreach ($views as $index => $view) {
         if ($viewName === $view) {
-            if (in_array($view, $controllers)) {
-                // Include controller
-                include "./controller/$view"; 
-            }
-            // Include view
             return include "./views/$view";
         }
     }
@@ -29,3 +30,4 @@ function includeView($views, $controllers, $viewName) {
 // Base template
 include "./templates/app.php";
 ?>
+ 
