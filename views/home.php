@@ -9,7 +9,7 @@
     <li class="post-container">
         <div class="post-header">
             <h3><?= htmlspecialchars($post["postTitle"]); ?></h3>
-            <small>Erstellt von <?= htmlspecialchars($post["postCreatedBy"]); ?> am <?= htmlspecialchars($post["postCreatedOn"]); ?></small>
+            <small>Erstellt von <?= htmlspecialchars($post["username"]); ?> am <?= htmlspecialchars($post["postCreatedOn"]); ?></small>
         </div>
         <?php if (strlen(trim($post["postBanner"])) > 0): ?>
             <img src="<?= htmlspecialchars($post["postBanner"]) ?>" alt="content not found" class="post-banner">

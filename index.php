@@ -16,7 +16,7 @@ $views = [
 
 $controllers = [
     "PostController.php",
-    /* "LinksController.php", */
+    // "LinksController.php", 
     "UserController.php"
 ];
 
