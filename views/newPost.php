@@ -1,5 +1,5 @@
 <?php
-if(isset($_SESSION["userId"])) {
+if(isset($_SESSION["userId"]) && $_SESSION["userId"] !== null) {
     $sqlStmt = $pdo -> prepare("SELECT * FROM `tblUser` WHERE `userId` = :searchedUserId");
 
     $sqlStmt->execute([
@@ -25,13 +25,10 @@ if ($success === false): ?>
     <p><?= $error ?></p>
     <?php endforeach; ?>
 </div>
-<?php endif; ?>
+<?php endif; ?> 
 <form action="?page=newPost.php" method="POST">
     <label for="postTitle">Titel</label>
     <input type="text" name="postTitle" id="postTitle" placeholder="Mein neuer Post" required>
-
-    <label for="postAuthor">Ihr Name</label>
-    <input type="text" name="postAuthor" id="PostAuthor" placeholder="Noah Buchs" required>
 
     <label for="postContent">Inhalt</label>
     <textarea name="postContent" id="postContent" placeholder="Arch > Gentoo" required></textarea>
