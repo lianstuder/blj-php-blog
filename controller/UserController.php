@@ -1,5 +1,8 @@
 <?php 
+
+// Error handling
 $success = false;
+
 
 // Register
 // TODO: INPUT VALIDATION
@@ -35,7 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST["login"])) {
     $result = $sqlStmt->fetchAll();
     if ($result) {
         $_SESSION["userId"] = $result[0]["userId"];
-        $success = true;
     }
 }
 ?>
