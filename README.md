@@ -17,12 +17,12 @@
 - [ ] Als Benutzer will ich auf einen Blog-Beitrag antworten können (Kommentarfunktion). 2
 - [ ] Als Blog-Entwickler will ich, dass andere Entwickler alle Beiträge meines Blogs über eine JSON-Schnittstelle abrufen können. 3
 - [ ] Als Benutzer will ich auch die Blog-Beiträge aller anderen BLJ-Blogs sehen. Diese werden über die JSON-Schnittstelle abgeholt. 3
-- [ ] Als Blogger will ich mich einloggen, um Blog-Beiträge zu schreiben, damit niemand in meinem Namen bloggen kann. 3
-- [ ] Als Blogger will ich, das mein Passwort verschlüsselt in der Datenbank abgelegt wird. 3
+- [x] Als Blogger will ich mich einloggen, um Blog-Beiträge zu schreiben, damit niemand in meinem Namen bloggen kann. 3
+- [x] Als Blogger will ich, das mein Passwort verschlüsselt in der Datenbank abgelegt wird. 3
 - [ ] Als Blogger will ich mein Passwort ändern können. 3
 - [ ] Als Benutzer will ich einen Blog-Beitrag kommentieren können. 3
 - [ ] Als Blogger will ich per E-Mail informiert werden, wenn eine meiner Beiträge bewertet/kommentiert wurde. 3
-- [ ] Als Benutzer will ich mich registrieren können, um selber als Blogger Beiträge schreiben zu können. 3
+- [x] Als Benutzer will ich mich registrieren können, um selber als Blogger Beiträge schreiben zu können. 3
 
 ## Blog URLs DB
 
