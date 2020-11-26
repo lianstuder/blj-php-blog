@@ -5,13 +5,27 @@ $success = false;
 
 // Existing posts
 $quPosts = $pdo->query("
-    SELECT tu.username, tp.postTitle, tp.postContent, tp.postCreatedOn, tp.postBanner
+    SELECT tu.username, tp.postId, tp.postTitle, tp.postContent, tp.postCreatedOn, tp.postBanner
     FROM tblUser AS tu
     INNER JOIN tblPost AS tp
     ON tu.userId = tp.postCreatedBy
     ORDER BY postCreatedOn DESC
 ");
 $posts = $quPosts->fetchAll();
+
+
+// Upvotes and Downvotes
+$quUpvotes = $pdo->query("
+    SELECT *
+    FROM tblUpvote
+");
+$upvotes = count($quUpvotes->fetchAll());
+
+$quDownvotes = $pdo->query("
+    SELECT *
+    FROM tblDownvote
+");
+$downvotes = count($quDownvotes->fetchAll());
 
 // User
 if(isset($_SESSION["userId"]) && $_SESSION["userId"] !== null) {
