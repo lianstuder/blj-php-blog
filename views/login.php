@@ -11,7 +11,7 @@
     <input type="text" name="username" id="username">
     
     <label for="password">Passwort</label>
-    <input type="password" name="password" id="password">
+    <input type="password" name="password" id="password"></br></br>
 
     <input type="submit" name="login" value="Anmelden">
 </form>

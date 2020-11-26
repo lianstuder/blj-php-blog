@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="./static/styles/skeleton.css">
     <link rel="stylesheet" href="./static/styles/normalize.css">
 
+    <!-- Browser favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./static/images/favicon.ico" />
+
     <!-- Custom Stylesheet  -->
     <link rel="stylesheet" href="./static/styles/index.css">
     
@@ -16,7 +19,7 @@
 <body>
     <header>
         <div id="title-bar">
-            <h1>Blog</h1>
+            <img src="./static/images/favicon_64.png" alt="Archwiki" />
             <nav>
                 <ul>
                     <?php foreach($views as $name => $view): ?>

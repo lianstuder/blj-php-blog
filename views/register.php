@@ -17,7 +17,7 @@
     <input type="password" name="password" id="password">
 
     <label for="repeatPassword">Passwort wiederholen</label>
-    <input type="password" name="repeatPassword" id="repeatPassword">
+    <input type="password" name="repeatPassword" id="repeatPassword"></br></br>
 
     <input type="submit" name="register" value="Registrieren">
 </form>
