@@ -35,6 +35,12 @@ small {
     color: grey;
 }
 
+form {
+    background-color: var(--background-light);
+    padding: 20px;
+    margin: 20px 0;
+}
+
 /* ===== ERRORS ===== */
 .error-box {
     color: red;
@@ -69,6 +75,7 @@ header {
     justify-content: space-around;
     align-items: center;
     background-color: var(--background-dark);
+    padding: 8px;
 }
 
 #title-bar * {
@@ -86,14 +93,14 @@ header {
 
 /* ===== BODY =====  */
 .container {
-    margin-top: 100px;
+    margin-top: 110px;
 }
 
 /* ===== POSTS ===== */
 .post-container {
     background-color: var(--background-light);
     padding: 20px;
-    margin: 20px 0 !important;
+    margin: 20px 0;
 }
 
 .post-container h3 {
