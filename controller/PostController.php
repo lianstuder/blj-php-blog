@@ -1,7 +1,7 @@
 <?php
 
 
-function submitVote($voteTable) {
+/* function submitVote($voteTable) {
     if (isset($_POST["upvote"])) {
         $userId = $user[0]["userId"] ?? "";
         $postId = $post["postId"] ?? "";
@@ -38,7 +38,7 @@ function submitVote($voteTable) {
             }   
         }
     }  
-}
+} */
 
 // Error handling
 $success = false;

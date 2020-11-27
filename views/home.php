@@ -6,11 +6,11 @@
 </nav>
 <ul>
 <?php foreach ($posts as $post):
-    if (isset("upvote")) {
+    /* if (isset("upvote")) {
         submitVote("tblUpvote");
     } else if (isset("downvote")) {
         submitVote("tblDownvote");
-    }
+    } */
 ?>
     <li class="post-container">
         <div class="post-header">
