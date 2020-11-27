@@ -5,34 +5,12 @@
     </ul>
 </nav>
 <ul>
-<?php foreach ($posts as $post): 
-if (isset($_POST["upvote"])) {
-    $userId = $user[0]["userId"] ?? "";
-    $postId = $post["postId"] ?? "";
-
-    // Check if user already voted
-    $sqlStmt = $pdo -> query("
-        SELECT us.userId, ps.postId, postId, userId
-        FROM tblUpvote
-        INNER JOIN tblPost AS ps
-        INNER JOIN tblUser AS us
-        ON us.userId = userId AND ps.postId = postId 
-    ");
-    $result = $sqlStmt->fetchAll();
-
-    if ($result[0]["userId"] !== $userId && $result[0]["postId"] !== $postId) {
-        $sqlStmt = $pdo->prepare("
-        INSERT INTO `tblUpvote` VALUES (?, ?)
-        ");
-
-        if (!empty(trim($userId)) &&!empty(trim($postId))) {
-            $sqlStmt->execute([
-                $postId,
-                $userId
-            ]);
-        }   
+<?php foreach ($posts as $post):
+    if (isset("upvote")) {
+        submitVote("tblUpvote");
+    } else if (isset("downvote")) {
+        submitVote("tblDownvote");
     }
-}      
 ?>
     <li class="post-container">
         <div class="post-header">
