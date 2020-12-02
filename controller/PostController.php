@@ -13,9 +13,16 @@ $quPosts = $pdo->query("
 ");
 $posts = $quPosts->fetchAll();
 
+$user = "";
+if (verifyUserId($_SESSION["userId"], $pdo)) {
+    $user = getUserByID($_SESSION["userId"], $pdo);
+}
+
 // Insert post
 if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST["post"])) {
-    $user = $user[0];
+    if (!count($user) > 0) {
+        die("hooold up");
+    }
 
     // Input data cleanup 
     $submittedValues = $_POST;
@@ -33,6 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST["post"])) {
         $_POST["postContent"], 
         $_POST["postBanner"]
     ]);
+
+    header("location: ?page=home.php");
 }
 
 ?>

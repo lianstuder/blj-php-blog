@@ -21,7 +21,7 @@ if ($success === false): ?>
     <label for="repeatPassword">Passwort wiederholen</label>
     <input type="password" name="repeatPassword" id="repeatPassword"><br /><br />
 
-    <input type="submit" name="register" value="Registrieren">
+    <input type="submit" name="register" value="Registrieren"><br /><br />
     <small>Du hast bereits ein Account? <a href="?page=login.php">Anmelden</a></small>
 </form>
 <?php else: ?>

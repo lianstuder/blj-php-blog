@@ -20,7 +20,7 @@ if ($success === false): ?>
     -->
 
     <label for="postBanner">Banner Image URL</label>
-    <input type="text" name="postBanner" id="postBanner" placeholder="https://somedomain.com/image.jpg">
+    <input type="text" name="postBanner" id="postBanner" placeholder="https://somedomain.com/image.jpg"><br /><br />
 
     <input type="submit" value="Posten" name="post">
 </form>

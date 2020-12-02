@@ -15,7 +15,7 @@ if ($success === false): ?>
     <label for="password">Passwort</label>
     <input type="password" name="password" id="password"><br /><br />
 
-    <input type="submit" name="login" value="Anmelden"><br />
+    <input type="submit" name="login" value="Anmelden"><br /><br />
     <small>Noch kein Account? <a href="?page=register.php">Registrieren</a></small>
 </form>
 <?php else: ?>

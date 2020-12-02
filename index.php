@@ -16,8 +16,8 @@ $page = $_GET["page"] ?? "home.php";
 
 $controllers = [
     "userVerification.php",
-    "PostController.php",
     "UserController.php",
+    "PostController.php",
 ];
 
 // Include controllers
@@ -39,7 +39,6 @@ if (verifyUserId($_SESSION["userId"], $pdo)) {
 } else {
     $views["Anmelden"] = "login.php";
     $views["Registrieren"] = "register.php";
-    echo "BRUUUUUUUUUUUUH";
 }
 
 // Base template
