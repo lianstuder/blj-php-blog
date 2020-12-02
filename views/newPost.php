@@ -1,22 +1,4 @@
 <?php
-if(isset($_SESSION["userId"]) && $_SESSION["userId"] !== null) {
-    $sqlStmt = $pdo -> prepare("SELECT * FROM `tblUser` WHERE `userId` = :searchedUserId");
-
-    $sqlStmt->execute([
-        ":searchedUserId" => $_SESSION["userId"]
-    ]);
-
-    $result = $sqlStmt->fetchAll();
-    if (empty($result))  {
-        die("Fehler: UserID wurde als ungültig gewertet.");
-        header("location: ?page=login.php");
-        exit;
-    }
-} else {
-    header("location: ?page=login.php");
-    exit;
-}
-
 if ($success === false): ?>
 <h2>Neuer Post</h2>
 <?php if (sizeof($errors) > 0): ?>

@@ -6,11 +6,7 @@
 </nav>
 <ul>
 <?php foreach ($posts as $post):
-    /* if (isset("upvote")) {
-        submitVote("tblUpvote");
-    } else if (isset("downvote")) {
-        submitVote("tblDownvote");
-    } */
+   
 ?>
     <li class="post-container">
         <div class="post-header">
@@ -21,12 +17,7 @@
             <img src="<?= htmlspecialchars($post["postBanner"]) ?>" alt="content not found" class="post-banner">
         <?php endif; ?>
         <p class="post-body"><?= htmlspecialchars($post["postContent"]); ?></p>
-        <div class="post-footer">
-            <form action="?page=home.php" method="POST">
-                <button type="submit" name="upvote"><img src="./static/images/upvote.png" alt="upvote"><?= $upvotes ?></button>
-                <button type="submit" name="downvote"><img src="./static/images/downvote.png" alt="downvote"><?= $downvotes ?></button>
-            </form>
-        </div>
+
     </li>
 <?php endforeach; ?>
 </ul>

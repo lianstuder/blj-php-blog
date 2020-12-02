@@ -116,8 +116,9 @@ header {
 }
 
 p.post-body {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
+    word-wrap: break-word;
 }
 
 .post-footer {
